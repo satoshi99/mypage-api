@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from mdeditor.fields import MDTextField
+
 
 class Tag(models.Model):
     name = models.CharField(max_length=255)
@@ -13,8 +15,8 @@ class Post(models.Model):
     tags = models.ManyToManyField(Tag, blank=True)
     title = models.CharField(max_length=255)
     thumbnail = models.ImageField(upload_to='thumbnail/', blank=True, null=True)
-    content = models.TextField()
     description = models.TextField(blank=True)
+    content = MDTextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     published_at = models.DateTimeField(blank=True, null=True)
@@ -22,7 +24,7 @@ class Post(models.Model):
 
     class Meta:
         # sort in descending of created_at
-        ordering = ['-created_at']
+        ordering = ['-published_at']
 
     # override the published_at
     def save(self, *args, **kwargs):
@@ -32,3 +34,13 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    # def convert_markdown_to_html(self):
+    #     return markdownify(self.content)
+
+    # def markdown_to_html(self):
+    #     md = markdown.Markdown(
+    #         extensions=['extra', 'admonition', 'sane_lists', 'toc']
+    #     )
+    #     html = md.convert(self.content)
+    #     return html

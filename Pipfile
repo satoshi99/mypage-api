@@ -9,6 +9,13 @@ verify_ssl = true
 django = "*"
 djangorestframework = "*"
 pillow = "*"
+pytest-django = "*"
+django-cors-headers = "*"
+markdown = "*"
+django-markdownx = "*"
+django-cleanup = "*"
+markdown-katex = "*"
+django-mdeditor = "*"
 
 [requires]
 python_version = "3.8"
