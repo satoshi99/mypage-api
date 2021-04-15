@@ -16,6 +16,11 @@ django-markdownx = "*"
 django-cleanup = "*"
 markdown-katex = "*"
 django-mdeditor = "*"
+dj-static = "*"
+gunicorn = "*"
+dj-database-url = "*"
+whitenoise = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.8"
