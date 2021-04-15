@@ -21,6 +21,8 @@ gunicorn = "*"
 dj-database-url = "*"
 whitenoise = "*"
 psycopg2 = "*"
+boto3 = "*"
+django-storages = "*"
 
 [requires]
 python_version = "3.8"
