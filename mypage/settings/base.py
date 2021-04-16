@@ -50,6 +50,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
 # markdown setting
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 MDEDITOR_CONFIGS = {

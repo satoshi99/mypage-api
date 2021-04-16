@@ -17,6 +17,7 @@ class Post(models.Model):
     thumbnail = models.ImageField(upload_to='thumbnail/', blank=True, null=True)
     description = models.TextField(blank=True)
     content = MDTextField()
+    contentImage = models.ImageField(upload_to='contents/', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     published_at = models.DateTimeField(blank=True, null=True)

@@ -16,8 +16,5 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ('id', 'tags', 'title', 'thumbnail', 'content', 'description',
+        fields = ('id', 'tags', 'title', 'thumbnail', 'content', 'contentImage', 'description',
                   'created_at', 'updated_at', 'published_at', 'is_public')
-
-    # def get_contentHtml(self, obj):
-    #     return obj.markdown_to_html()
