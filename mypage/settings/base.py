@@ -59,7 +59,8 @@ MDEDITOR_CONFIGS = {
 }
 
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000"
+    "http://localhost:3000",
+    f"https://{AWS_S3_URL}",
 ]
 
 REST_FRAMEWORK = {

@@ -34,13 +34,3 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-
-    # def convert_markdown_to_html(self):
-    #     return markdownify(self.content)
-
-    # def markdown_to_html(self):
-    #     md = markdown.Markdown(
-    #         extensions=['extra', 'admonition', 'sane_lists', 'toc']
-    #     )
-    #     html = md.convert(self.content)
-    #     return html
