@@ -12,5 +12,5 @@ AWS_S3_OBJECT_PARAMETERS = {
 }
 AWS_QUERYSTRING_AUTH = False  # URLからクエリパラメータを削除
 
-AWS_S3_URL = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-MEDIA_URL = 'https://%s/%s/' % (AWS_S3_URL, 'media')
+AWS_S3_URL = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+MEDIA_URL = f'https://{AWS_S3_URL}/media/'
