@@ -16,5 +16,5 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ('id', 'tags', 'title', 'thumbnail', 'content', 'contentImage', 'description',
+        fields = ('id', 'tags', 'title', 'thumbnail', 'content', 'description',
                   'created_at', 'updated_at', 'published_at', 'is_public')
