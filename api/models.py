@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from mdeditor.fields import MDTextField
+import markdown
 
 
 class Tag(models.Model):
@@ -34,6 +35,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def markdown(self):
+        return markdown.markdown(self.content, extensions=['markdown.extensions.fenced_code', 'toc'])  # 末尾に 'toc' を追加
 
 
 class ContentImage(models.Model):
